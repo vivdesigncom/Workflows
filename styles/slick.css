@@ -89,8 +89,9 @@
 .slick-slide img
 {
     display: block;
-	text-align: center;
-	margin: auto;
+    text-align: center;
+    margin: auto;
+    max-width: 90%;
 }
 .slick-slide.slick-loading img
 {

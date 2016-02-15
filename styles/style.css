@@ -1,4 +1,4 @@
-﻿body{
+body{
 	margin: 0;
 	padding: 0;
 	min-width: 320px;
@@ -366,6 +366,9 @@ p{
 .aboutUsIconHolder{
 	text-align: center;
 	padding-top: 10px;
+}
+.aboutUsIconHolder img {
+	width: 100%;
 }
 .textPosition{
 	text-align: center;
