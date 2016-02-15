@@ -368,7 +368,7 @@ p{
 	padding-top: 10px;
 }
 .aboutUsIconHolder img {
-	width: 100%;
+	max-width: 100%;
 }
 .textPosition{
 	text-align: center;
