@@ -45,6 +45,17 @@ $(document).ready(function(){
 		  dots: true,
 		  arrows: false,
 	});
+	
+	$('.testimonialsSlider').randomize().slick({
+		  infinite: true,
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  autoplay: false,
+		  dots: false,
+		  nextArrow: $('.nextArrowTestim'),
+		  prevArrow: $('.previousArrowTestim'),
+	});
+	
 	$('.menuButton').click(function(){
 		$('.menuFloat').slideToggle();
 	});
@@ -60,20 +71,36 @@ $(document).ready(function(){
 	}
 });
 
+$.fn.randomize = function (selector) {
+    var $elems = selector ? $(this).find(selector) : $(this).children(),
+        $parents = $elems.parent();
+
+    $parents.each(function () {
+        $(this).children(selector).sort(function (childA, childB) {
+            // * Prevent last slide from being reordered
+            if($(childB).index() !== $(this).children(selector).length - 1) {
+                return Math.round(Math.random()) - 0.5;
+            }
+        }.bind(this)).detach().appendTo(this);
+    });
+
+    return this;
+};
+
 
 function isInView(elem){
-   return $(elem).offset().top - $(window).scrollTop() < $(elem).height() ;
+	return $(elem).offset().top/1.7 - $(window).scrollTop() < $(elem).height();
 }
 
 function showElems(){
 	if (isInView($('.animatedContainer'))){
-		 var time = 100;
+		 var time = 0;
 	 	 $('.animatedContainer').each(function() {                 
 	 	     var $this  = $(this);
 	 	     var animation= $(this).attr('data-animation');
 	 	     function delayed() {
 	 	    	 $this.addClass('animated ' + animation);
-	 	      }
+	 	     }
 	 	     setTimeout( delayed , time );
 	 	     time += 100;
 	 	 });
@@ -98,10 +125,10 @@ $( window ).resize(function() {
 
 $(window).scroll(function() {
   if($(window).scrollTop() >= $('#headerWrap').offset().top + $('#headerWrap').outerHeight() - window.innerHeight) {
- $('.menuIndex').addClass('sticky');
+	  $('.menuIndex').addClass('sticky');
   }
   if($(window).scrollTop() == 0){
- $('.menuIndex').removeClass('sticky');
+	  $('.menuIndex').removeClass('sticky');
   }
   showElems();
 });

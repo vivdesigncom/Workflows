@@ -25,7 +25,7 @@ h1{
 	margin-left: -5px;
 	padding: 5px;
 	font-family: 'Open sans', sans-serif;
-	font-size: 60px;
+	font-size: 40px;
 	text-align: left;
 	line-height: 60px;
 	font-weight: 300;
@@ -35,7 +35,7 @@ h2{
 	margin-left: -5px;
 	padding: 5px;
 	font-family: 'Open sans', sans-serif;
-	font-size: 50px;
+	font-size: 30px;
 	text-align: left;
 	line-height: 50px;
 	font-weight: 300;
@@ -45,7 +45,7 @@ h3{
 	margin-left: -5px;
 	padding: 5px;
 	font-family: 'Open sans', sans-serif;
-	font-size: 40px;
+	font-size: 25px;
 	text-align: left;
 	line-height: 40px;
 	font-weight: 300;
@@ -55,7 +55,7 @@ h4{
 	margin-left: -5px;
 	padding: 5px;
 	font-family: 'Open sans', sans-serif;
-	font-size: 30px;
+	font-size: 18px;
 	text-align: left;
 	line-height: 30px;
 	font-weight: 300;
@@ -77,6 +77,10 @@ h5{
 .menuContainer{
 	width: 90%;
 	margin: auto;
+	height: 100%;
+}
+.menuPosition{
+	height: 100%
 }
 #headerWrap{
 	width: 100%;
@@ -92,13 +96,21 @@ input.search{
 	width: 38px;
 	height: 38px;
 	border: none;
-	margin-top: 0;
+	
 	float: right;
 	padding-right: 42px;
 	-webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
+	position: relative;
+	transform: translateY(-50%);
+	top: 50%;
+}
+.vertical-align{
+	position: relative;
+	transform: translateY(-50%);
+	top: 50%;
 }
 input.search:focus {
 	width: 150px;
@@ -122,6 +134,7 @@ a:focus{
 }
 .sticky{
 	position: fixed !important;
+	height: 60px !important;
 }
 .menuIndex{
 	z-index: 2;
@@ -129,11 +142,17 @@ a:focus{
 	width: 100% !important;
     background: #fff !important;
     opacity: 0.9;
+	height: 80px;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	transition: height 0.2s;
 }
 .headerSlideHolder{
 	position: relative;
 	z-index: 1;
-	
+}
+.slick-slider{
+	margin-bottom: 0;
 }
 .slick-dots li button::before{
 	font-size: 50px;
@@ -146,21 +165,25 @@ a:focus{
 .slick-dots{
 	bottom: 0;
 }
-
+.bannerContent{
+	padding-bottom: 50px;
+}
 .backpic1{
 	width: 100%;
 	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	padding-top: 99px;
+	padding-top: 100px;
 	float: left;
-	padding-bottom: 30px;
+	position: relative;
+	margin-bottom: -5%;
+  	padding-bottom: 5%;
 }
+
 .logoStyle{
 	padding: 5px;
 	float: left;
-	width: 25%;
-	margin-top: 20px;
+	max-height: 100%;
 }
 .menuButton{
 	float: right;
@@ -174,14 +197,20 @@ a:focus{
 	text-align: center;
 	opacity: 0.9;
 }
+nav.menu{
+	height: 100%;
+}
 .menuFloat{
     list-style-type: none;
-    margin: 0;
     padding: 0;
 	float: right;
+	margin-bottom: 0;
+	height: 100%;
 }
 .menuInsideFloat {
 	float: left;
+	height: 100%;
+	display: table;
 	/* padding-top: 8px; */
 }
 .menuText{
@@ -190,8 +219,10 @@ a:focus{
 	font-family: 'Open sans', sans-serif;
 	font-size: 14px;
 	text-align: center;
-	line-height: 35px;
+	height: 100%;
 	font-weight: 600;
+	display:table-cell;
+    vertical-align:middle;
 }
 .menuText a {
     text-decoration: none ;
@@ -238,7 +269,8 @@ p{
 }
 .productBackColor{
 	background-color: #263e4f;
-	width: 212px;
+	display: inline;
+	margin-left: 0;
 }
 .articleTextWhite{
 	font-family: 'Open sans', sans-serif;
@@ -251,6 +283,7 @@ p{
 .buttonHolderHeader{
 	float: left;
 	margin-top: 20px;
+	padding-left: 5px;
 }
 .buttonBlue{
 	margin: 5px;
@@ -350,6 +383,8 @@ p{
 	padding: 10px;
 	width: 100%;
 	clear: both;
+	overflow: hidden;
+	margin-bottom: 5px;
 	text-align: center;
 }
 .iconsStyle{
@@ -361,7 +396,8 @@ p{
 .iconsText{
 	float: left;
 	width: 80%;
-	height: 80px;
+	display: table-cell;
+	vertical-align: middle;
 }
 .aboutUsIconHolder{
 	text-align: center;
@@ -399,28 +435,41 @@ p{
 }
 .clientsSliderHolder{
 	position: relative;
+	padding: 10px;
 }
 .sliderSlick{
 	overflow: hidden;
 }
 .clientsSlider{
 	text-align: center;
-	display: block;
+	min-height: 10em;
+	position: relative;
 }
-.previousArrow{
+.clientsSlider img{
+	max-width: 80%;
+	position: absolute;
+	left:0;
+  right:0;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.previousArrow, .previousArrowTestim{
 	position: absolute;
 	left: 25px;
 	width: 25px;
 	height: 25px;
-	top: 45px;
+	top: 50%;
+  	transform: translateY(-50%);
 	z-index:100;
 }
-.nextArrow{
+.nextArrow, .nextArrowTestim {
 	position: absolute;
 	right: 25px;
 	width: 25px;
 	height: 25px;
-	top: 45px;
+	top: 50%;
+  	transform: translateY(-50%);
 	z-index:100;
 }
 #clientsQuotes{
@@ -429,12 +478,13 @@ p{
 	background-image: url("../images/backgroundBluePattern.png");
 	background-position: top center;
 	background-repeat: no-repeat;
+	position: relative;
 }
 .whiteQuote{
 	font-family: 'Open sans', sans-serif;
 	font-size: 16px;
 	text-align: left;
-	line-height: 16px;
+	line-height: 30px;
 	font-weight: 400;
 	color: #fff;
 }
@@ -779,8 +829,11 @@ blockquote{
 /* Responsive 1200 */
 @media only screen 
 and (max-width : 1200px) {
+	.menuPosition{
+		margin: 0 !important;
+	}
 	.menuContainer{
-		width: 95%;
+		width: 100%;
 		margin: auto;
 	}
 	.backpic1{
@@ -791,27 +844,22 @@ and (max-width : 1200px) {
 	background-size: auto 100%;
 	background-position: top center;
 	}
-	.menuText{
-	padding-left: 5px !important;
-	padding-right: 5px !important;
-	}
 	.previousArrow{
 		left: 5px;
 	}
-	.nextArrow{
+	.nextArrow {
+		right: 5px;
+	}
+	.previousArrowTestim{
+		left: 5px;
+	}
+	.nextArrowTestim{
 		right: 5px;
 	}
 }
 /* Responsive 1024 */
 @media only screen 
 and (max-width : 1024px) {
-	.menuContainer{
-		width: 98%;
-		margin: auto;
-	}
-	.logoStyle{
-	width: 30%;
-	}
 	.pic4{
 		display: none;
 	}
@@ -844,7 +892,10 @@ and (max-width : 991px) {
 @media only screen 
 and (max-width : 900px) {
 	.menuInsideFloat {
-	float: none !important;
+		float: none !important;
+		width: 100%;
+		background: #fff;
+		opacity: 0.9;
 	}
 	.menuFloat{
 	width: 100%;
@@ -881,9 +932,7 @@ and (max-width : 900px) {
 /* Responsive 768 */
 @media only screen 
 and (max-width : 768px) {
-	.logoStyle{
-	width: 50%;
-	}
+
 	.aboutUsIconOrange{
 	float: none;
 	}
@@ -937,9 +986,6 @@ and (max-width : 480px) {
 	.pinCoordinates{
 		display: none;
 	}
-	.menuButton{
-		margin-top: 30px;
-	}
 	.aboutUsIconOrange{
 	float: none;
 	}
@@ -952,8 +998,7 @@ and (max-width : 480px) {
 	height: 180px;
 	}
 	.logoStyle{
-	margin-top: 20px;
-	width: 80%;
+		height: 80%
 	}
 }
 
