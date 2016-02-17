@@ -69,6 +69,14 @@ $(document).ready(function(){
 	}else{
 		$('.resourceIcon').css('line-height', 70 +  'px');
 	}
+	
+	//Icons hover
+	$('.aboutUsIconHolder img').bind('mouseenter mouseleave', function() {
+	    $(this).attr({
+	        src: $(this).attr('data-hover') 
+	        , 'data-hover': $(this).attr('src') 
+	    })
+	});
 });
 
 $.fn.randomize = function (selector) {

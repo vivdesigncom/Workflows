@@ -356,6 +356,7 @@ p{
 	line-height: 40px;
 	font-weight: 300;
 	border-radius: 20px;
+	border: 0;
 }
 .buttonOrange a{
 	color: #fff;
@@ -413,10 +414,6 @@ p{
 	width: 100%;
 	overflow: hidden;
 	background-color: #f1603d;
-}
-#aboutUsIconsOrangeWrap h4{
-    text-align: left;
-	margin-left: 115px;
 }
 .aboutUsIconsOrangeHolder{
 	text-align: center;
@@ -561,17 +558,19 @@ p{
 	display: block;
 }
 .pinInfoHolder{
-
 	background-color: #fff;
-	border: 3px solid #263e4f;
-	border-radius: 10px;
 	position: relative;
 	z-index: 10000;
+	max-width: 360px;
 	display: none;
+	overflow: hidden;
+	box-shadow: 0px 0px 5px #888888;
+}
+.pinThumb{
+	padding:0;
 }
 .pinPic{
-	width: 198px;
-	border-radius: 6px;
+	width: 100%;
 }
 .pinText{
 	font-family: 'Open sans', sans-serif;
@@ -584,7 +583,7 @@ p{
 }
 .pic2{
 	width: 80%;
-	padding:10px;
+	padding: 25px;
 }
 .backgroundOrangeFlat{
 	background-color: #f0502a !important;
@@ -824,6 +823,53 @@ blockquote{
     border-left: none !important;
 }
 
+.circle{
+	background: url('../images/circle.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+	height: 300px;
+	width: 100%;
+	margin: auto;
+	line-height: 300px;
+	text-align: center;
+	padding: 30px;
+	position: relative;
+}
+.circle h4{
+	color: #F37637;
+	font-weight: bold;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	width: 66%;
+	text-align: center;
+}
+.aboutUsIconsOrangeHolder ul{
+	padding-left: 0;
+	text-align: center; 
+}
+
+#contactForm{
+	background: #464646;
+	border-top: 10px solid #f1603d;
+}
+.contactFormInput{
+	height: 50px;
+	width: 100%;
+	padding: 10px;
+	line-height: 50px;
+	background: #b2b2b2;
+	border: none;
+	margin-top: 20px;
+}
+textarea.contactFormInput{
+	height: 150px;
+	padding-top: 0px;
+}
+.margin15{
+	margin: 20px;
+}
 /* RESPONSIVE */
 
 /* Responsive 1200 */
@@ -876,10 +922,6 @@ and (max-width : 1024px) {
 /* Responsive 991 */
 @media only screen 
 and (max-width : 991px) {
-	#aboutUsIconsOrangeWrap h4{
-	    text-align: center;
-		margin-left: -5px;
-	}
 	#characteristicsWrap{
 		padding-bottom: 10px;
 	}
@@ -961,6 +1003,14 @@ and (max-width : 768px) {
 	.twoBlogPosts .articleTextBlue{
 		height: auto;
 	}
+	.circle{
+		background-size:  auto 100%;
+	}
+	.circle h4{
+		width: 40%;
+		left: 25%;
+		right: 0;
+	}
 }
 /* Responsive 600 */
 @media only screen 
@@ -978,6 +1028,9 @@ and (max-width : 600px) {
 	#characteristicsWrap{
 	background-image: none;
 	background-color: #f1603d;
+	}
+	.iconsText{
+		display: block;
 	}
 }
 /* Responsive 480 */
@@ -999,6 +1052,11 @@ and (max-width : 480px) {
 	}
 	.logoStyle{
 		height: 80%
+	}
+	.circle h4{
+		width: 80%;
+		left: 2%;
+		right: 0;
 	}
 }
 

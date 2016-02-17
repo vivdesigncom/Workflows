@@ -5,11 +5,11 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="content-language" content="en-us" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="styles/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="styles/slick-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="styles/style.css"/>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>	
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -123,9 +123,14 @@
 						<div class="pinPosition" style="top: 45%;left: 72%;">
 							<img class="pinIcon" src="images/pin.png" />
 							<div class="pinInfoHolder">
-								<img src="images/Working_team3_1024x682.jpg" class="pinPic"/>
-								<p class="pinText"><b>Coral Springs, FL</b>
-								<br/>Management, Sales</p>
+								<div class="col-md-6 pinThumb">
+									<img src="images/Working_team3_1024x682.jpg" class="pinPic"/>
+								</div>
+								<div class="col-md-6">
+									<p class="pinText"><b>Coral Springs, FL</b>
+									<br/>Management, Sales</p>
+								</div>
+								
 							</div>
 						</div>
 						<div class="pinPosition" style="top: 32%;left: 74%;">
@@ -169,7 +174,7 @@
 							</div>
 						</div>
 					</div>
-					<img src="images/aboutUsHeader.png" class="backpic2"/>
+					<img src="images/aboutUsHeader2.png" class="backpic2"/>
 				</div>
 			</div>
 		</header>
@@ -192,50 +197,50 @@
 		</div>
 
         <!-- Company Icons -->
-        <div id="aboutUsIconsWrap">
-            <div class="container">
-                <div class="clientsTitle"><h2 class="blue textPosition">Quality software solution provider you can trust</h2></div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
-                        <div class="aboutUsIconHolder">
-                            <a href="#"><img src="images/founded-in.png" /></a>
-                            <h4 class="blue textPosition">Company founded back in 1995</h4>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
-                        <div class="aboutUsIconHolder">
-                            <a href="#"><img src="images/count-and-growing.png" /></a>
-                            <h4 class="blue textPosition">150,000 users and growing</h4>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
-                        <div class="aboutUsIconHolder">
-                            <a href="#"><img src="images/new-version.png" /></a>
-                            <h4 class="blue textPosition">2 months<br />release cycle</h4>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
-                        <div class="aboutUsIconHolder">
-                            <a href="#"><img src="images/response-to-isues.png" /></a>
-                            <h4 class="blue textPosition">24/7 support desk<br />30min response time</h4>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
-                        <div class="aboutUsIconHolder">
-                            <a href="#"><img src="images/PeopleQuestIcon.png" /></a>
-                            <h4 class="blue textPosition">Online training and consulting</h4>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
-                        <div class="aboutUsIconHolder">
-                            <a href="#"><img src="images/SuppliertQuestIcon.png" /></a>
-                            <h4 class="blue textPosition">Platform available on the web, tablet and mobile</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end // Company Icons -->
+	    <div id="aboutUsIconsWrap">
+	        <div class="container">
+	            <h2 class="text-center">Quality software solution provider you can trust</h2>
+	            <div class="row">
+	                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+	                    <div class="aboutUsIconHolder">
+	                        <a href="#"><img src="images/icons/foundedInWhite.png" data-hover="images/icons/foundedIn.png" /></a>
+	                        <h4 class="blue textPosition">Company founded back in 1995</h4>
+	                    </div>
+	                </div>
+	                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+	                    <div class="aboutUsIconHolder">
+	                        <a href="#"><img src="images/icons/150kCustomersWhite.png" data-hover="images/icons/150kCustomers.png" /></a>
+	                        <h4 class="blue textPosition">150,000 users and growing</h4>
+	                    </div>
+	                </div>
+	                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+	                    <div class="aboutUsIconHolder">
+	                        <a href="#"><img src="images/icons/2monthsReleaseCycleWhite.png" data-hover="images/icons/2monthsReleaseCycle.png" /></a>
+	                        <h4 class="blue textPosition">2 months<br />release cycle</h4>
+	                    </div>
+	                </div>
+	                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+	                    <div class="aboutUsIconHolder">
+	                        <a href="#"><img src="images/icons/24730minWhite.png" data-hover="images/icons/24730min.png" /></a>
+	                        <h4 class="blue textPosition">24/7 support desk<br />30min response time</h4>
+	                    </div>
+	                </div>
+	                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+	                    <div class="aboutUsIconHolder">
+	                        <a href="#"><img src="images/icons/onlineTrainingWhite.png" data-hover="images/icons/onlineTraining.png" /></a>
+	                        <h4 class="blue textPosition">Online training and consulting</h4>
+	                    </div>
+	                </div>
+	                <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+	                    <div class="aboutUsIconHolder">
+	                        <a href="#"><img src="images/icons/responsivePlatformWhite.png" data-hover="images/icons/responsivePlatform.png" /></a>
+	                        <h4 class="blue textPosition">Platform available on the web, tablet and mobile</h4>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <!-- end // Company Icons -->
 
 		<div class="headerSlideHolder">
 			<div class="backgroundOrangeBorder">
