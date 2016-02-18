@@ -616,7 +616,14 @@ p{
 }
 
 /* Products */
-
+.productInfo{
+	height: 330px;
+	overflow: hidden;
+}
+.subtitle{
+	line-height: 0px;
+	margin-bottom: 25px;
+}
 .backgroundBlueBorder{
 	width: 100%;
 	overflow: hidden;

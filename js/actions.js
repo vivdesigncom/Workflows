@@ -104,7 +104,7 @@ $.fn.randomize = function (selector) {
 };
 
 function showElems(){
-	if ($('.animatedContainer').visible(true)){
+	if ($('.animatedContainer').visible(true,true)){
 		 var time = 0;
 	 	 $('.animatedContainer').each(function() {                 
 	 	     var $this  = $(this);
