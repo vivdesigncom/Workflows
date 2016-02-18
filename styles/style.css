@@ -27,6 +27,26 @@ body{
 #demoModal .modal-body {
     overflow: hidden;
 }
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #363636;
+	opacity: 1;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #363636;
+	opacity: 1;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #363636;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #363636;
+	opacity: 1;
+}
 h1{
 	margin: 5px;
 	margin-left: -5px;
@@ -338,6 +358,13 @@ p{
 .videos .articleTextBlue{
 	text-align: justify;
 	padding: 0 15px 0 15px;
+}
+.verticalArticle{
+	border-right: 1px solid #eeeeee;
+	margin-top: 20px;
+}
+.verticalArticle:last-child{
+	border-right: none;
 }
 .threelBlogPosts .articleTextBlue{
 	height: 275px;
