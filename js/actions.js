@@ -77,6 +77,14 @@ $(document).ready(function(){
 	        , 'data-hover': $(this).attr('src') 
 	    })
 	});
+	
+	//
+
+	
+	$('#videoModal').on('shown.bs.modal', function() { 
+	    $(this).find('video')[0].play();
+	});
+	
 });
 
 $.fn.randomize = function (selector) {
@@ -97,7 +105,7 @@ $.fn.randomize = function (selector) {
 
 
 function isInView(elem){
-	return $(elem).offset().top/1.7 - $(window).scrollTop() < $(elem).height();
+	return $(elem).offset().top/2 - $(window).scrollTop() < $(elem).height();
 }
 
 function showElems(){

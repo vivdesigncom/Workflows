@@ -20,6 +20,9 @@ body{
 .blue.description{
 	font-weight: 700;
 }
+.modal-dialog {
+    min-width: 670px; 
+}
 h1{
 	margin: 5px;
 	margin-left: -5px;
@@ -410,6 +413,10 @@ p{
 .textPosition{
 	text-align: center;
 }
+.products .textPosition{
+	margin-top: 5px;
+}
+
 #aboutUsIconsOrangeWrap{
 	width: 100%;
 	overflow: hidden;
@@ -638,7 +645,7 @@ p{
 	text-align: center;
 }
 .products .articleTextBlue{
-	height: 50px;
+	height: 100px;
 	overflow: hidden;
 }
 /* Contact */
