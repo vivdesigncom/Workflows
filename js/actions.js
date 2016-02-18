@@ -103,13 +103,8 @@ $.fn.randomize = function (selector) {
     return this;
 };
 
-
-function isInView(elem){
-	return $(elem).offset().top/2 - $(window).scrollTop() < $(elem).height();
-}
-
 function showElems(){
-	if (isInView($('.animatedContainer'))){
+	if ($('.animatedContainer').visible(true)){
 		 var time = 0;
 	 	 $('.animatedContainer').each(function() {                 
 	 	     var $this  = $(this);

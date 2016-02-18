@@ -20,8 +20,12 @@ body{
 .blue.description{
 	font-weight: 700;
 }
-.modal-dialog {
-    min-width: 670px; 
+#videoModal .modal-dialog {
+    width: 80%; 
+	margin: auto;
+}
+#demoModal .modal-body {
+    overflow: hidden;
 }
 h1{
 	margin: 5px;
@@ -504,6 +508,9 @@ p{
 }
 .contactForm{
 	padding: 10px 0 10px 0;
+}
+.demoForm{
+	overflow: hidden;
 }
 .contactLabels{
 	font-family: 'Open sans', sans-serif;
