@@ -15,13 +15,13 @@ body{
 	text-decoration: none;
 }
 .blue{
-	color: #263e4f;
+	color: #336892;
 }
 .blue.description{
 	font-weight: 700;
 }
 #videoModal .modal-dialog {
-    width: 80%; 
+    width: 60%;
 	margin: auto;
 }
 #demoModal .modal-body {
@@ -65,7 +65,7 @@ h2{
 	font-size: 30px;
 	text-align: left;
 	line-height: 50px;
-	font-weight: 300;
+	font-weight: 600;
 }
 h3{
 	margin: 5px;
@@ -82,10 +82,10 @@ h4{
 	margin-left: -5px;
 	padding: 5px;
 	font-family: 'Open sans', sans-serif;
-	font-size: 17px;
+	font-size: 18px;
 	text-align: left;
 	line-height: 1.4;
-	font-weight: 300;
+	font-weight: 500;
 }
 h5{
 	margin: 5px;
@@ -109,6 +109,13 @@ h5{
 .menuPosition{
 	height: 100%
 }
+.language{
+	display: inline-block;
+	float: right;
+}
+.langDropdown .menuInsideFloat{
+	height: 40px;
+}
 #headerWrap{
 	width: 100%;
 	overflow: hidden;
@@ -120,19 +127,20 @@ input.search{
 	background: url(../images/search.png);
 	background-position: right;
 	background-repeat: no-repeat;
-	width: 38px;
-	height: 38px;
+	background-size: contain;
+	width: 26px;
+	height: 26px;
 	border: none;
 	
 	float: right;
-	padding-right: 42px;
+	padding-right: 30px;
 	-webkit-transition: width 1s ease-in-out;
-    -moz-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-inotification_hookn-out;
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
 	position: relative;
 	transform: translateY(-50%);
-	top: 50%;
+	top: 35px;
 }
 .vertical-align{
 	position: relative;
@@ -151,13 +159,13 @@ input.search:focus {
 } 
 
 .signIn a:hover{
-	color: #263e4f;
+	color: #295170;
 }
 a:focus{
 	outline: none;	
 }
 .signIn a:focus, .signIn a i:focus{
-	color: #263e4f;
+	color: #295170;
 }
 .sticky{
 	position: fixed !important;
@@ -187,7 +195,7 @@ a:focus{
 	opacity: 1;
 }
 .slick-dots li.slick-active button::before{
-	color: #263e4f;
+	color: #295170;
 }
 .slick-dots{
 	bottom: 0;
@@ -214,9 +222,9 @@ a:focus{
 }
 .menuButton{
 	float: right;
-	color: #263E4F;
+	color: #295170;
 	font-size: 30px;
-	margin-top: 10px;
+	margin-top: 8px;
 	display: none;
 	background: #fff;
 	padding: 5px;
@@ -224,10 +232,10 @@ a:focus{
 	text-align: center;
 	opacity: 0.9;
 }
-nav.menu{
+nav.menu, .language{
 	height: 100%;
 }
-.menuFloat{
+.menuFloat, .langFloat{
     list-style-type: none;
     padding: 0;
 	float: right;
@@ -238,13 +246,18 @@ nav.menu{
 	float: left;
 	height: 100%;
 	display: table;
-	/* padding-top: 8px; */
+}
+.language  .menuInsideFloat{
+	width: 125px;
+	background: #fff;
+	opacity: 0.9;
+	float: none;
 }
 .menuText{
 	margin: 0 5px 0 5px;
 	padding: 0 15px 0 15px;
 	font-family: 'Open sans', sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 	height: 100%;
 	font-weight: 600;
@@ -253,11 +266,11 @@ nav.menu{
 }
 .menuText a {
     text-decoration: none ;
-	color: #263e4f;
+	color: #295170;
 }
 .menuText a:hover {
     text-decoration: none;
-	color: #263e4f;
+	color: #295170;
 }
 .signIn{
 	float: right;
@@ -279,7 +292,7 @@ nav.menu{
 	line-height: 30px;
 }
 .signIn a{
-	color: #263e4f;
+	color: #295170;
     line-height: 15px;
     font-size: 14px;
     margin-left: 10px;
@@ -295,7 +308,8 @@ p{
     margin-bottom: 0 !important;
 }
 .productBackColor{
-	background-color: #263e4f;
+	background-color: #295170;
+	opacity: 0.6;
 	display: inline;
 	margin-left: 0;
 }
@@ -316,7 +330,7 @@ p{
 	margin: 5px;
 	width: 260px;
 	height: 40px;
-	background-color: #263e4f;
+	background-color: #295170;
 	font-family: 'Open sans', sans-serif;
 	font-size: 16px;
 	text-align: center;
@@ -352,7 +366,7 @@ p{
 	text-align: left;
 	line-height: 25px;
 	font-weight: 400;
-	color: #263e4f;
+	color: #295170;
 }
 
 .videos .articleTextBlue{
@@ -382,7 +396,7 @@ p{
 	margin: 5px;
 	width: 260px;
 	height: 40px;
-	background-color: #f0502a;
+	background-color: #f1603d;
 	font-family: 'Open sans', sans-serif;
 	font-size: 16px;
 	text-align: center;
@@ -451,7 +465,10 @@ p{
 #aboutUsIconsOrangeWrap{
 	width: 100%;
 	overflow: hidden;
-	background-color: #f1603d;
+	background-image: url("../images/backgroundOrangePattern.png");
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding-bottom: 5px;
 }
 .aboutUsIconsOrangeHolder{
 	text-align: center;
@@ -530,7 +547,7 @@ p{
 #footerBackWrap{
 	width: 100%;
 	overflow: hidden;
-	background-color: #263e4f;
+	background-color: #295170;
 	border-top: 10px solid #f1603d;
 }
 .contactForm{
@@ -619,7 +636,7 @@ p{
 	text-align: left;
 	line-height: 14px;
 	font-weight: 400;
-	color: #263e4f;
+	color: #295170;
 	padding: 5px;
 }
 .pic2{
@@ -654,7 +671,7 @@ p{
 .backgroundBlueBorder{
 	width: 100%;
 	overflow: hidden;
-	border-bottom: 1px solid #263e4f;
+	border-bottom: 1px solid #295170;
 }
 .buttonScheduleDemoHolder{
 	text-align: center;
@@ -695,7 +712,7 @@ p{
 	font-family: 'Open sans', sans-serif;
 	font-size: 14px;
 	text-align: left;
-	color: #263e4f;
+	color: #295170;
 	line-height: 20px;
 	font-weight: 400;
 }
@@ -734,7 +751,7 @@ p{
 .leftMenuHolder{
 	float: left;
 	width: 30%;
-	background-color: #263e4f;
+	background-color: #295170;
 	padding: 10px;
 }
 .articleTextWhite a{
@@ -754,7 +771,7 @@ p{
 	
 }
 .readMore{
-	background-color: #263e4f;
+	background-color: #295170;
 	border-radius: 20px;
 	margin: 10px 0px 10px 0px;
     font-family: 'Open sans', sans-serif;
@@ -790,7 +807,7 @@ p{
 	font-family: 'Open sans', sans-serif;
 	font-size: 14px;
 	text-align: left;
-	color: #263e4f;
+	color: #295170;
 	line-height: 20px;
 	font-weight: 600;
 	text-align: center;
@@ -798,29 +815,29 @@ p{
 	width: 30px;
 }
 .pages a{
-	color: #263e4f;
+	color: #295170;
 	display: block;
 	padding: 5px;
 	width: 100%;
 	text-decoration: none;
 }
 .pages a:hover{
-	color: #263e4f;
+	color: #295170;
 	background-color: #e8eef3;
 	text-decoration: none;
 }
 .curr_page
 {
-	color: #263e4f;
+	color: #295170;
 	background-color: #e8eef3;
 	text-decoration: none;
 }
 .curr_page a{
-	color: #263e4f;
+	color: #295170;
 	text-decoration: none;
 }
 .curr_page a:hover{
-	color: #263e4f;
+	color: #295170;
 	text-decoration: none;
 }
 
@@ -844,11 +861,11 @@ p{
 
 .resourcePics{
 	width: 100%;
-	border: 1px solid #263e4f;
+	border: 1px solid #295170;
 }
 .resourceIcon{
 	/* line-height: 369px !important; */
-	color: #263e4f;
+	color: #295170;
 	font-size: 6em !important;
 }
 .animatedContainer {
@@ -971,6 +988,9 @@ and (max-width : 1024px) {
 	.topContent, .relatedArticles{
 		width: 90%;	
 	}
+	#videoModal .modal-dialog {
+		width: 75%;
+	}
 }
 /* Responsive 991 */
 @media only screen 
@@ -1003,6 +1023,16 @@ and (max-width : 900px) {
     width: 100% !important;
 	float: none !important;
 	}
+	.language {
+		display: block;
+		float: none;
+	}
+	.language .menuInsideFloat{
+		width: 100%;
+	}
+	.langDropdown .menuInsideFloat {
+		height: inherit;
+	}
 	.signIn{
 		display: none;
 	}
@@ -1022,6 +1052,9 @@ and (max-width : 900px) {
 	}
 	.search, .clearRight{
 		display: none;
+	}
+	#videoModal .modal-dialog {
+		width: 80%;
 	}
 }
 /* Responsive 768 */

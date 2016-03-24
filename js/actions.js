@@ -57,11 +57,16 @@ $(document).ready(function(){
 	});
 	
 	$('.menuButton').click(function(){
-		$('.menuFloat').slideToggle();
+		$('nav > .menuFloat').slideToggle();
+	});
+
+	$('.language .menuFloat').hide();
+	$('.language .menuText').click(function(){
+		$('.language .menuFloat').slideToggle();
 	});
 
     showElems();
-    
+
 	//add icon if resource img is missing
     $('.resources a:not(:has(".resourcePics"))').append('<i class="resourceIcon fa fa-file-text-o"></i>');
 	if ($(window).width() > 765) {
@@ -132,6 +137,7 @@ $( window ).resize(function() {
 	}else{
 		$('.resourceIcon').css('line-height', 70 + 'px');
 	}
+	$('.language .menuFloat').hide();
 });
 
 $(window).scroll(function() {
