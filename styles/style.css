@@ -131,7 +131,6 @@ input.search{
 	width: 26px;
 	height: 26px;
 	border: none;
-	
 	float: right;
 	padding-right: 30px;
 	-webkit-transition: width 1s ease-in-out;
@@ -140,7 +139,7 @@ input.search{
     transition: width 1s ease-in-out;
 	position: relative;
 	transform: translateY(-50%);
-	top: 35px;
+	top: 50%;
 }
 .vertical-align{
 	position: relative;
@@ -241,6 +240,9 @@ nav.menu, .language{
 	float: right;
 	margin-bottom: 0;
 	height: 100%;
+}
+.menuFloat .fa.fa-angle-down{
+	margin-left: 7px;
 }
 .menuInsideFloat {
 	float: left;
@@ -430,6 +432,9 @@ p{
 	overflow: hidden;
 	margin-bottom: 5px;
 	text-align: center;
+}
+.iconHolder h4{
+	font-weight: bold;
 }
 .iconsStyle{
 	float: left;
@@ -1104,6 +1109,9 @@ and (max-width : 768px) {
 		width: 40%;
 		left: 25%;
 		right: 0;
+	}
+	#aboutUsIconsOrangeWrap {
+		background-size: auto 100%;
 	}
 }
 /* Responsive 600 */
