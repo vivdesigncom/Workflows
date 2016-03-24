@@ -368,11 +368,6 @@ p{
 	font-weight: 400;
 	color: #295170;
 }
-
-.videos .articleTextBlue{
-	text-align: justify;
-	padding: 0 15px 0 15px;
-}
 .verticalArticle{
 	border-right: 1px solid #eeeeee;
 	margin-top: 20px;
@@ -843,7 +838,9 @@ p{
 
 
 /* Videos */
-
+.videos{
+	padding-bottom: 35px;
+}
 .playIcon{
 	position: absolute;
     width: 25%;
@@ -851,11 +848,22 @@ p{
     padding-top: 5px;
     padding-bottom: 5px;
     left: 38%;
-    top: 15%;
+    top: 25%;
 }
-
-.videos{
-	padding-bottom: 10px;
+.playIconHolder{
+	position: relative;
+}
+.playIconHolder video{
+	display: block;
+	float: none;
+}
+.videos h4{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.videos .articleTextBlue{
+	text-align: justify;
+	padding: 0 15px 0 15px;
 }
 /* Resources */
 
@@ -877,7 +885,7 @@ p{
 .resources .aboutUsIconHolder  .articleTextBlue{
 	text-align: justify;
 	height: 75px;
-	overflow: hidden; 
+	overflow: hidden;
 }
 .resources {
 	padding-bottom: 10px;
