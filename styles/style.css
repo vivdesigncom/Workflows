@@ -402,6 +402,19 @@ p{
 	height: 200px;
 	overflow: hidden;
 }
+.fourBlogBosts .articleTextBlue{
+	height: 200px;
+	overflow: hidden;
+}
+.fourBlogBosts .buttonBlue{
+	width: 100%;
+}
+.fourBlogBosts .buttonHolderArticle, .fourBlogBosts .buttonBlue a {
+	width: 100%;
+}
+.fourBlogBosts h3{
+	line-height: 30px;
+}
 .buttonHolderArticle{
 	float: right;
 	margin: 10px 0 10px 0;
