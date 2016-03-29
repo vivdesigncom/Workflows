@@ -20,9 +20,6 @@ body{
 .blue.description{
 	font-weight: 700;
 }
-.orange{
-	color: #f1603d;
-}
 #videoModal .modal-dialog {
     width: 60%;
 	margin: auto;
@@ -253,7 +250,7 @@ nav.menu, .language{
 	display: table;
 }
 .language  .menuInsideFloat{
-	width: 60px;
+	width: 125px;
 	background: #fff;
 	opacity: 0.9;
 	float: none;
@@ -276,20 +273,6 @@ nav.menu, .language{
 .menuText a:hover {
     text-decoration: none;
 	color: #295170;
-}
-.language > div > .menuText{
-	padding: 0 16px 0 16px;
-}
-.language > div > .menuText a {
-	color: #fff;
-	background: #263E4F;
-	border-radius: 50%;
-	height: 28px;
-	display: block;
-	padding-top: 2px;
-}
-.language .fa{
-	display: none;
 }
 .signIn{
 	float: right;
@@ -401,19 +384,6 @@ p{
 .twoBlogPosts .articleTextBlue{
 	height: 200px;
 	overflow: hidden;
-}
-.fourBlogBosts .articleTextBlue{
-	height: 200px;
-	overflow: hidden;
-}
-.fourBlogBosts .buttonBlue{
-	width: 100%;
-}
-.fourBlogBosts .buttonHolderArticle, .fourBlogBosts .buttonBlue a {
-	width: 100%;
-}
-.fourBlogBosts h3{
-	line-height: 30px;
 }
 .buttonHolderArticle{
 	float: right;
@@ -971,16 +941,7 @@ blockquote{
 	border: none;
 	margin-top: 20px;
 }
-.contactFormInput-v2{
-	height: 50px;
-	width: 100%;
-	padding: 10px;
-	line-height: 50px;
-	background: #fff;
-	border: none;
-	margin-top: 20px;
-}
-textarea.contactFormInput, textarea.contactFormInput-v2{
+textarea.contactFormInput{
 	height: 150px;
 	padding-top: 0px;
 }
@@ -991,6 +952,24 @@ iframe.map{
 	width: 100%;
 	border: 0;
 	min-height: 500px;
+}
+
+#map_canvas 
+{
+	width: 100%; 
+	min-height: 400px;
+	border-bottom: solid 56px white;
+	*border-bottom: 0px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+	padding-top: 35%;
+	margin-bottom: 30px;
+	position: relative;
+	top: 80px;
+}
+#map_canvas h3{
+	font-size: 14px;
 }
 /* RESPONSIVE */
 
@@ -1101,20 +1080,6 @@ and (max-width : 900px) {
 	}
 	.menuButton{
 	display: block;
-	}
-	.language .fa{
-		display: inline-block;
-	}
-	.language > div > .menuText{
-		padding: 0 16px 0 16px;
-	}
-	.language > div > .menuText a {
-		color: #263E4F;
-		background: #fff;
-		border-radius: 0;
-		height: 28px;
-		display: block;
-		padding-top: 2px;
 	}
 	.search, .clearRight{
 		display: none;
