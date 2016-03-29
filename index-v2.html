@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>WorkflowsToday.com</title>
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/slick.css" />
+    <link rel="stylesheet" type="text/css" href="styles/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/animate.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.visible.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/actions.js"></script>
+</head>
+<body>
+<!-- Video popup -->
+<div id="videoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Video</h4>
+            </div>
+            <div class="modal-body">
+                <video width="100%" controls loop>
+                    <source src="video/10sec_test.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end // Video popup -->
+
+<!-- Request a demo popup -->
+<div id="demoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Interested in a demo?</h4>
+            </div>
+            <div class="modal-body">
+                <div class="demoForm col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="com-md-4 col-sm-4 col-xs-12">Name</label>
+                        <div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="com-md-4 col-sm-4 col-xs-12">Job title</label>
+                        <div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="com-md-4 col-sm-4 col-xs-12">Company</label>
+                        <div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2" ></div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="com-md-4 col-sm-4 col-xs-12">Business Email</label>
+                        <div class="com-md-8 col-sm-8 col-xs-12"><input type="text" class="form-control" id="exampleInputName2"></div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="com-md-4 col-sm-4 col-xs-12">Phone</label>
+                        <div class="com-md-8 col-sm-8 col-xs-12"><input type="password" class="form-control" id="exampleInputPassword1" ></div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="com-md-4 col-sm-4 col-xs-12">Country</label>
+                        <div class="com-md-8 col-sm-8 col-xs-12">
+                            <select class="form-control">
+                                <option>United States</option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <label class="com-md-4 col-sm-4 col-xs-12">Prefered Time</label>
+                        <div class="com-md-8 col-sm-8 col-xs-12">
+                            <select class="form-control">
+                                <option>Afternoon</option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Send</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end // Request a demo popup -->
+
+<header>
+    <div id="headerWrap">
+        <!-- Header -->
+        <div class="menuIndex">
+            <div class="menuContainer">
+                <div class="row menuPosition">
+                    <!-- Company Logo -->
+                    <a href="index.html"><img src="images/logo.png" class="logoStyle" /></a>
+
+                    <!-- Sign In Buttons -->
+                    <!--<div class="signIn">
+                        <div class="menuText blue">
+                            <a href="#"data-toggle="modal" data-target="#myModal">
+                                Login
+                            </a>
+                        </div>
+                        <div class="menuText blue">
+                            <a href="#"data-toggle="modal" data-target="#myModal">
+                                Register
+                            </a>
+                        </div>
+                    </div>-->
+                    <!-- end // Sign In Buttons -->
+
+                    <div class="clearRight"></div>
+                    <div class="menuButton"><i class="fa fa-bars"></i></div>
+
+                    <!-- Search -->
+                    <input class="search" type="text" />
+
+                    <nav class="menu">
+                        <ul class="menuFloat">
+                            <li class="menuInsideFloat"><div class="menuText blue"><a href="index.html">Home</a></div></li>
+                            <li class="menuInsideFloat"><div class="menuText blue"><a href="products.html">Products</a></div></li>
+                            <li class="menuInsideFloat"><div class="menuText blue"><a href="blog.html">Blog</a></div></li>
+                            <li class="menuInsideFloat"><div class="menuText blue"><a href="aboutUs.html">About</a></div></li>
+                            <li class="language">
+                                <div class="menuInsideFloat">
+                                    <div class="menuText"><a href="#">en<i class="fa fa-angle-down"></i></a></div>
+                                </div>
+                                <ul class="menuFloat langDropdown">
+                                    <li class="menuInsideFloat"><div class="menuText"><a href="#">es</a></div></li>
+                                    <li class="menuInsideFloat"><div class="menuText"><a href="#">jp</a></div></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- end // Main Menu -->
+                </div>
+            </div>
+        </div>
+        <!-- end // Header -->
+        <!-- Main Slider -->
+        <div class="headerSlideHolder">
+            <!-- Slide -->
+            <div class="backpic1" style="background-image: url('images/banner.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                            <article class="articles">
+                                <h1 class="white productBackColor">ISOQuest</h1>
+                                <h3 class="white">Business Processes Management Software</h3>
+                                <p class="articleTextWhite">
+                                    World class ISO 9001, ISO/TS 16949, ISO 14001 and OHSAS 18001 education, consulting and software services.
+                                    <br /><br />Easy deployment, implementation and operation from the shop floor to the top management backed by the best Customer Service.
+                                </p>
+                            </article>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="products.html">Our 360&deg; Solution</a></div>
+                            </div>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#videoModal">See the Video</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end // Slide -->
+            <!-- Slide -->
+            <div class="backpic1" style="background-image: url('images/banner.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                            <article class="articles">
+                                <h1 class="white productBackColor">DocuQuest</h1>
+                                <h3 class="white">Document Control Management Software</h3>
+                                <p class="articleTextWhite">Reduces the Document Management effort by 80%</p>
+                            </article>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="product.html">Learn More</a></div>
+                            </div>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end // Slide -->
+            <!-- Slide -->
+            <div class="backpic1" style="background-image: url('images/banner.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                            <article class="articles">
+                                <h1 class="white productBackColor">PeopleQuest</h1>
+                                <h3 class="white">Employee Training &amp; Learning Management Program</h3>
+                            </article>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#">Learn More</a></div>
+                            </div>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end // Slide -->
+            <!-- Slide -->
+            <div class="backpic1" style="background-image: url('images/banner.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                            <article class="articles">
+                                <h1 class="white productBackColor">PRRQuest</h1>
+                                <h3 class="white">Corrective and Preventive Action (CAPA) Software System</h3>
+                                <p class="articleTextWhite">
+                                    Problem Reporting and Resolution - simple and effective CAPA Management System.
+                                    <br /><br />Reduce the administrative cycle time from Report Initiation to Effective Closure
+                                </p>
+                            </article>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#">Learn More</a></div>
+                            </div>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end // Slide -->
+            <!-- Slide -->
+            <div class="backpic1" style="background-image: url('images/banner.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                            <article class="articles">
+                                <h1 class="white productBackColor">AuditQuest</h1>
+                                <h3 class="white">Quality Audit Management System</h3>
+                                <p class="articleTextWhite">Explore flexible workflows for master audit scheduling, planning, execution, reporting, post audit improvement and review process</p>
+                            </article>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#">Learn More</a></div>
+                            </div>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end // Slide -->
+            <!-- Slide -->
+            <div class="backpic1" style="background-image: url('images/banner.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 bannerContent">
+                            <article class="articles">
+                                <h1 class="white productBackColor">GageQuest</h1>
+                                <h3 class="white">Calibration Control Software &amp; Gage Calibration Program</h3>
+                            </article>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#">Learn More</a></div>
+                            </div>
+                            <div class="buttonHolderHeader">
+                                <div class="buttonBlue"><a href="#" data-toggle="modal" data-target="#demoModal">Request Demo</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end // Slide -->
+
+        </div>
+        <!-- end // Main Slider -->
+
+    </div>
+</header>
+
+
+<!--
+<div id="articleWrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <img src="images/pic1.png" class="pic1"/>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <article class="articles">
+                    <h2 class="blue">DocuQuest: </h2>
+                    <h3 class="blue">Document Control Management Software</h3>
+                    <p class="articleTextBlue">It is estimated from our client base using the DocuQuest/PeopleQuest Module that
+                    there is an 80% of reduction of Document Management Effort (all activities in the Life Cycle of a Document)
+                    <br/><br/><b>The following value to the organization is realized as a result of the Document Control Software,
+                    training management bundled modules.</b></p>
+                </article>
+                <div class="buttonHolderArticle">
+                    <div class="buttonOrange"><a href="#">VIEW MORE</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!-- List of Products -->
+<div id="">
+    <div class="container">
+        <h2 class="orange text-center">Business Processes Management Software</h2>
+        <h4 class="orange text-center">For more than 20 years the ISOQuest Family serves to optimize the management effort on the main daily business activities such as:</h4>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="iconHolder">
+                    <img src="images/management-orange.png" class="iconsStyle col-md-4" />
+                    <div class="iconsText col-md-8"><h4 class="orange textPosition1">Document Control Management</h4></div>
+                </div>
+                <div class="iconHolder">
+                    <img src="images/training-orange.png" class="iconsStyle col-md-4" />
+                    <div class="iconsText col-md-8"><h4 class="orange textPosition1">Personnel Training Program</h4></div>
+                </div>
+                <div class="iconHolder">
+                    <img src="images/action-tracking-orange.png" class="iconsStyle col-md-4" />
+                    <div class="iconsText col-md-8"><h4 class="orange textPosition1">NCR and CAPA Management</h4></div>
+                </div>
+                <div class="iconHolder">
+                    <img src="images/management-orange.png" class="iconsStyle col-md-4" />
+                    <div class="iconsText col-md-8"><h4 class="orange textPosition1">Customer &amp; Supplier Management</h4></div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="iconHolder">
+                    <img src="images/internal-auditing-orange.png" class="iconsStyle col-md-4" />
+                    <div class="iconsText col-md-8"><h4 class="orange textPosition1">Audit Management</h4></div>
+                </div>
+                <div class="iconHolder">
+                    <img src="images/maintenance-orange.png" class="iconsStyle col-md-4" />
+                        <div class="iconsText col-md-8"><h4 class="orange textPosition1">Gage Calibration and Gage R&amp;R</h4></div>
+                </div>
+                <div class="iconHolder">
+                    <img src="images/gage-r-and-r-orange.png" class="iconsStyle col-md-4" />
+                    <div class="iconsText col-md-8"><h4 class="orange textPosition1">PLM, APQP and PPAP</h4></div>
+                </div>
+                <div class="iconHolder">
+                    <img src="images/continuous-improvement-orange.png" class="iconsStyle col-md-4" />
+                    <div class="iconsText col-md-8"><h4 class="orange textPosition1">Continuous Improvement</h4></div>
+                </div>
+                <!--
+                <div class="iconHolder">
+                    <img src="images/document-control.png" class="iconsStyle"/>
+                    <div class="iconsText"><h3 class="white textPosition1">FMEA Document Control</h3></div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end // List of Products -->
+<!-- Company Icons -->
+<div id="aboutUsIconsWrap">
+    <div class="container">
+        <h2 class="text-center blue">Quality software solution provider you can trust</h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/foundedInNewIcon.png" /></a>
+                    <h4 class="blue textPosition">Company founded back in 1995</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/usersAndGrowingIcon.png" /></a>
+                    <h4 class="blue textPosition">150,000 users and growing</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/releaseCycleIcon.png" /></a>
+                    <h4 class="blue textPosition">2 months<br />release cycle</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/supportAndResponceIcon.png" /></a>
+                    <h4 class="blue textPosition">24/7 support desk<br />30min response time</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/onlineTrainigIcon.png" /></a>
+                    <h4 class="blue textPosition">Online training and consulting</h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 animatedContainer" data-animation="bounceInUp">
+                <div class="aboutUsIconHolder">
+                    <a href="#"><img class="pulseIcon" src="images/icons/platformNewIcon.png" /></a>
+                    <h4 class="blue textPosition">Platform available on the web, tablet and mobile</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end // Company Icons -->
+<!-- Implementation Process Icons -->
+<div id="aboutUsIconsOrangeWrap">
+    <div class="container">
+        <h2 class="white text-center">Implementation process tailored to your needs</h2>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle"><h4 class="white">Business Needs Analysis</h4></div>
+                <div class="aboutUsIconsOrangeHolder">
+                    <!--<a href="#"><img src="images/performance.png" class="aboutUsIconOrange"/></a>-->
+                    <ul class="articleTextWhite paddingStyle">
+                        <li>Identify existing workflows and process improvements needed</li>
+                        <li>Identify requirements for training</li>
+                        <li>Obtain data required for system configuration</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle"><h4 class="white">Training and Deployment</h4></div>
+                <div class="aboutUsIconsOrangeHolder">
+                    <!--<a href="#"><img src="images/steady-succesful-adaptive.png" class="aboutUsIconOrange"/></a>-->
+                    <ul class="articleTextWhite paddingStyle">
+                        <li>Environment setup, configuration and testing</li>
+                        <li>Personnel training - on-site or online</li>
+                        <li>Import existing data</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="circle"><h4 class="white">Continual Support and Consulting</h4></div>
+                <div class="aboutUsIconsOrangeHolder">
+                    <!--<a href="#"><img src="images/service-and-support.png" class="aboutUsIconOrange"/></a>-->
+                    <ul class="articleTextWhite paddingStyle">
+                        <li>Weekly support meetings</li>
+                        <li>Refresher training webinars</li>
+                        <li>Audit of usage level. Requests for enhancements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end // Implementation Process Icons -->
+<!-- Client Logos Slider -->
+<div id="clientsListWrap">
+    <div class="clientsTitle"><h2 class="blue textPosition">Industry leaders choose ISOQuest</h2></div>
+    <div class="clientsSliderHolder">
+        <img src="images/previous-arrow-blue.png" class="previousArrow" />
+        <img src="images/next-arrow-blue.png" class="nextArrow" />
+        <div class="container">
+            <div class="row sliderSlick">
+                <div class="clientsSlider">
+                    <img src="images/logo_agc.jpg" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_colfax.jpg" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_degussa.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_evonik.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_flowserve.jpg" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_honda.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_lear.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_lpag.svg" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_masterloy.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_omg.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_schukra.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_trelleborg.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_umicore.png" />
+                </div>
+                <div class="clientsSlider">
+                    <img src="images/logo_vigon.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end // Clients Slider -->
+<!-- Client Testimonials Slider -->
+<div id="clientsQuotes">
+    <img src="images/previous-arrow-white.png" class="previousArrowTestim" />
+    <img src="images/next-arrow-white.png" class="nextArrowTestim" />
+    <div class="container">
+        <div class="row">
+            <div class="testimonialsSlider">
+                <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                    <blockquote>
+                        <i class="fa fa-quote-left white"></i>
+                        <p class="whiteQuote">
+                            As a Site Administrator, I would highly recommend this product filled with amazing workflow solutions to any company that is looking to streamline their critical business processes. The DocuQuest and PeopleQuest modules are the solution to building training and talent development plans and measuring the effectiveness of training. ISOQuest is user friendly and the GQI support is superior! Thank you!
+                        </p>
+                        <br />
+                        <small class="white"><b>Theresa McMorrow Jordan</b>, HR Training and Development Consultant in the Automotive Industry</small>
+                    </blockquote>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                    <blockquote>
+                        <i class="fa fa-quote-left white"></i>
+                        <p class="whiteQuote">
+                            We found GQI’s ISOQuest software was closest in meeting our requirements for complete management of the documents and training, ease of use, document linking, and pricing for site use, set-up, training and maintenance.
+                            <br/>The installation and training were well received.  Personnel who attended training could immediately see the benefits of the ISOQuest system versus the current paper system.
+                        </p>
+                        <br />
+                        <small class="white"><b>Linda Dodd</b>, QA Manager</small>
+                    </blockquote>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 pull-left">
+                    <blockquote>
+                        <i class="fa fa-quote-left white"></i>
+                        <p class="whiteQuote">
+                            ISOQuest played a major role in helping us obtain ISO 9002 certification in a very short timeframe.  However, software alone does not make a complete quality system.  The technical support and training that was provided by GQI was also fundamental in our success.  Not only were we able to achieve ISO 9002 certification, but I believe that we now have in place a top notch quality system that will enable us to maintain this preferred status.
+                        </p>
+                        <br />
+                        <small class="white"><b>Richard D. Nelson</b>, Manager Special Projects</small>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end // Client Testimonials Slider -->
+<!-- Footer -->
+<div id="contactForm">
+    <div class="container">
+        <div class="row">
+            <h2 class="white text-center">Contact us to find out more</h2>
+            <div class="col-md-12">
+                <form>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="contactFormInput-v2" placeholder="Name" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="contactFormInput-v2" placeholder="Business email" />
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <textarea class="contactFormInput-v2" placeholder="Message"></textarea>
+                        <div class="text-center">
+                            <button class="buttonOrange text-center margin15">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footerBackWrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="contactForm">
+                        <img alt="WorkflowsToday" src="images/logoWhite.png" class="logoFooter" />
+                        <!--
+                        <p class="contactLabels">FIND US</p>
+                        <div class="SocialHolder">
+                            <a href="#"><img src="images/social-facebook.png" class="socialIcons"/></a>
+                            <a href="#"><img src="images/social-google-plus.png" class="socialIcons"/></a>
+                            <a href="#"><img src="images/social-in.png" class="socialIcons"/></a>
+                            <a href="#"><img src="images/social-twitter.png" class="socialIcons"/></a>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <!--
+                    <div class="contactForm">
+                        <div class="footerMenus">
+                            <a href="#"><div class="menuTextfooter white">Document Management System</div></a>
+                            <a href="#"><div class="menuTextfooter white">Training Program Software</div></a>
+                            <a href="#"><div class="menuTextfooter white">Customer and Supplier Management</div></a>
+                            <a href="#"><div class="menuTextfooter white">CAPA system</div></a>
+                            <a href="#"><div class="menuTextfooter white">Gage Calibration and Gage R&amp;R</div></a>
+                            <a href="#"><div class="menuTextfooter white">Audit Management</div></a>
+                            <a href="#"><div class="menuTextfooter white">Continual Improvement</div></a>
+                            <a href="#"><div class="menuTextfooter white">APQP and PPAP</div></a>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <!--
+                    <div class="contactForm">
+                        <a href="#"><div class="menuTextfooter white">WorkflowsToday.com</div></a>
+                        <a href="#"><div class="menuTextfooter white">Products</div></a>
+                        <a href="#"><div class="menuTextfooter white">About us</div></a>
+                        <a href="#"><div class="menuTextfooter white">Resources</div></a>
+                        <a href="#"><div class="menuTextfooter white">Videos</div></a>
+                        <a href="#"><div class="menuTextfooter white">Blog</div></a>
+                        <a href="#"><div class="menuTextfooter white">Contact</div></a>
+                    </div>
+                    -->
+                    <div class="footerMenus">
+                        <div class="menuTextfooter white"><b>Phone:</b> 	+1 888-238-9051</div>
+                        <div class="menuTextfooter white"><b>Fax:</b> 	+1 877-207-3405</div>
+                        <div class="menuTextfooter white"><b>Email:</b> 	sales@gqigroup.com</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end // Footer -->
+</body>
+</html>
