@@ -1009,6 +1009,16 @@ iframe.map{
 #map_canvas h3{
 	font-size: 14px;
 }
+
+.checkIconsContainer{
+	background: #fafafa;
+	margin-bottom:  20px;
+	padding-bottom: 15px;	
+}
+.checkIcon{
+	color: #336892;
+	font-size: 40px;
+}
 /* RESPONSIVE */
 
 /* Responsive 1200 */
